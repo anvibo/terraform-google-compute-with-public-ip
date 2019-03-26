@@ -4,6 +4,7 @@ resource "google_compute_address" "static" {
 
 resource "google_compute_instance" "default" {
     name = "${var.name}"
+    allow_stopping_for_update = true
 
     machine_type = "${var.type}"
 
